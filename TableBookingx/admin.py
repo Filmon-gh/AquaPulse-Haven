@@ -1,8 +1,10 @@
 from django.contrib import admin
 from .models import Reservation
+from django_summernote.admin import SummernoteModelAdmin
 
 
-class ReservationAdmin(admin.ModelAdmin):
+@admin.register(Reservation)
+class ReservationAdmin(SummernoteModelAdmin):
     list_display = (
         'user', 'first_name', 'last_name', 'email',
         'date', 'time', 'party_size', 'phone', 'created_at'
@@ -12,5 +14,3 @@ class ReservationAdmin(admin.ModelAdmin):
         'user__username', 'first_name', 'last_name',
         'email', 'phone'
     )
-
-admin.site.register(Reservation, ReservationAdmin)
