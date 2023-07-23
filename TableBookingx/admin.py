@@ -1,16 +1,18 @@
 from django.contrib import admin
 from .models import Reservation
-from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(Reservation)
-class ReservationAdmin(SummernoteModelAdmin):
+class ReservationAdmin(admin.ModelAdmin):
     list_display = (
         'user', 'first_name', 'last_name', 'email',
         'date', 'time', 'party_size', 'phone', 'created_at'
     )
-    list_filter = ('date', 'time', 'created_at')
+    list_filter = (
+        'date', 'time', 'created_at'
+    )
     search_fields = (
         'user__username', 'first_name', 'last_name',
         'email', 'phone'
     )
+    
