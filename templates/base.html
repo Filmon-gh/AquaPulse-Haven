@@ -11,7 +11,7 @@
             <a href="/">TableBookingX</a>
         </div>
         <nav>
-            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
             {% if user.is_authenticated %}
                 <li><a href="{% url 'account_logout' %}">Logout</a></li>
             {% else %}
@@ -20,6 +20,7 @@
             {% endif %}
         </nav>
     </header>
+    <li><a href="{% url 'reservation' %}">Reservations</a></li>
     <main>
         {% block content %}{% endblock content %}
     </main>
