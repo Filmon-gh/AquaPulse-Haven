@@ -6,7 +6,12 @@ from .models import Reservation
 
 def home_view(request):
     return render(request, 'home.html')
-   
+
+@login_required  # Apply the login_required decorator
+def reservation_list(request):
+    reservations = Reservation.objects.all()  # Query your reservations here
+    return render(request, 'reservation_list.html', {'reservations': reservations})
+
 
 @login_required
 def reservation_form(request):
