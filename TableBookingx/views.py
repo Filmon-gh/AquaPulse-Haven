@@ -32,3 +32,17 @@ def reservation_form(request):
     
 def reservation_success(request):
     return render(request, 'reservation_success.html')
+
+def update_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+
+    if request.method == 'POST':
+        form = ReservationForm(request.POST, instance=reservation)
+        if form.is_valid():
+            form.save()
+            # Redirect to a success page or reservation list
+            return redirect('reservation_success')
+    else:
+        form = ReservationForm(instance=reservation)
+
+    return render(request, 'update_reservation.html', {'form': form, 'reservation': reservation}
