@@ -46,3 +46,20 @@ def update_reservation(request, reservation_id):
         form = ReservationForm(instance=reservation)
 
     return render(request, 'update_reservation.html', {'form': form, 'reservation': reservation}
+
+
+@login_required
+def delete_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+
+    if request.method == 'POST':
+        # Check if the user confirms the deletion
+        if 'confirm_delete' in request.POST:
+            reservation.delete()
+            # Redirect to the reservation list or a success page
+            return redirect('reservation_list')
+        else:
+            # User canceled the deletion, redirect back to the reservation list
+            return redirect('reservation_list')
+
+    return render(request, 'delete_reservation.html', {'reservation': reservation})    
