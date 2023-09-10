@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Edit Reservation</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="reservation_id" value="{{ reservation.id }}">
+        <button type="submit">Update</button>
+
+    </form>
+{% endblock %}
+
+{% block main_content %}
+    <!-- Additional content specific to the update reservation page, if needed -->
+{% endblock %}
