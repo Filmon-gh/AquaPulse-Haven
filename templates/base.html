@@ -11,18 +11,25 @@
             <a href="/">TableBookingX</a>
         </div>
         <nav>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            {% if user.is_authenticated %}
-                <li><a href="{% url 'account_logout' %}">Logout</a></li>
-            {% else %}
-                <li><a href="{% url 'account_login' %}">Login</a></li>
-                <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-            {% endif %}
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                    <li><a href="{% url 'reservation_list' %}">Profile</a></li> 
+                {% else %}
+                    <li><a href="{% url 'account_login' %}">Login</a></li>
+                    <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                {% endif %}
+                <li><a href="{% url 'reservation' %}">Reservations</a></li>
+            </ul>
         </nav>
     </header>
-    <li><a href="{% url 'reservation' %}">Reservations</a></li>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
     <main>
-        {% block content %}{% endblock content %}
+        {% block main_content %}{% endblock %}
     </main>
     <footer>
         <div class="footer-content">
