@@ -1,0 +1,89 @@
+/* styles.css */
+
+/* Header Styles */
+header {
+  background-color: #007BFF; 
+  color: #FFFFFF; 
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+}
+
+nav .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center-align menu items */
+}
+
+nav .menu li {
+  margin-right: 20px; /* Adjust the spacing between menu items */
+}
+
+nav .menu li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+nav .menu li a {
+  text-decoration: none;
+  color: #FFFFFF; /* Set link text color */
+  font-weight: bold;
+}
+
+
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  margin: 0;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.social-links li {
+  margin-right: 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
