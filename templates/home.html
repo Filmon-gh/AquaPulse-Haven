@@ -4,32 +4,35 @@
 
 {% block content %}
     <!--  view image -->
-    <img src="https://res.cloudinary.com/dwspjhnrl/image/upload/v1694436020/rwvtfidq6wyapz8wfumh.jpg" alt="Image" class="image">
-
+    <h1 class="adventure-title">River-Side Picnic Adventure</h1>
+    <div class="image-container">
+        <img src="https://res.cloudinary.com/dwspjhnrl/image/upload/v1694436020/rwvtfidq6wyapz8wfumh.jpg" alt="River-Side Picnic Adventure" class="image">
+    </div>
     <!-- About Us Section -->
-    <section class="about-us">
+<section class="about-us">
+    <div class="centered-content">
         <h1>About Us</h1>
         <p>Welcome to our river-side picnic adventure!</p>
-        
-        <!-- Barbecue Section -->
-        <div class="activity">
-            <img src="{{ barbecue_image_url }}" alt="Barbecue" class="activity-image">
-            <h2>Barbecue</h2>
-            <p>Experience the joy of riverside barbecues with our delicious grilled delights. Reserve your spot now for an unforgettable outdoor dining experience.</p>
-        </div>
-        
-        <!-- Fishing Section -->
-        <div class="activity">
-            <img src="{{ fishing_image_url }}" alt="Fishing" class="activity-image">
-            <h2>Fishing</h2>
-            <p>Get your fishing gear ready! Enjoy a relaxing day of fishing by the river. Book your fishing spot and cast your line into the clear waters.</p>
-        </div>
-        
+        <p>We are passionate about providing you with unforgettable outdoor dining experiences.</p>
+        <p>Join us in exploring the beauty of the river up close, enjoying delicious barbecues, and relaxing fishing days.</p>
+        <p>Discover the serenity of paddling through the serene waters and taking in breathtaking scenery.</p>
+        <p>Come and make memories with us by the river.</p>
+    </div>
+    <div class="image-container">
         <!-- River Kayaking Section -->
         <div class="activity">
-            <img src="{{ kayaking_image_url }}" alt="Kayaking" class="activity-image">
-            <h2>River Kayaking</h2>
-            <p>Explore the river's beauty up close with our river kayaking adventure. Paddle through serene waters and take in the breathtaking scenery.</p>
+            <img src="https://res-console.cloudinary.com/dwspjhnrl/thumbnails/v1/image/upload/v1694435054/ZWx1enVuOXNtcDZzZ3NzdGZjamw=/preview" alt="Kayaking" class="activity-image">
         </div>
-    </section>
+
+        <!-- Barbecue Section -->
+        <div class="activity">
+            <img src="https://res-console.cloudinary.com/dwspjhnrl/thumbnails/v1/image/upload/v1694424750/a2ZvNXQ3NjZwZGhtcnZqcXE0eHk=/preview" alt="Barbecue" class="activity-image">
+        </div>
+    </div>
+
+    <!-- Fishing Section -->
+    <div class="activity">
+        <img src="https://res-console.cloudinary.com/dwspjhnrl/thumbnails/v1/image/upload/v1694434074/dXlkcG1rcXVvY2pjN2Frc2ttMWs=/preview" alt="Fishing" class="activity-image">
+    </div>
+</section>
 {% endblock content %}
