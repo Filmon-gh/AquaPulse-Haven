@@ -1,6 +1,6 @@
 from django import forms
+from django.utils import timezone
 from .models import Reservation
-
 
 class ReservationForm(forms.ModelForm):
     class Meta:
@@ -15,3 +15,14 @@ class ReservationForm(forms.ModelForm):
             'party_size': forms.NumberInput(attrs={'class': 'form-control'}),
             'phone': forms.TextInput(attrs={'class': 'form-control'}),
         }
+
+    def clean_date(self):
+        date = self.cleaned_data.get('date')
+        now = timezone.now().date()
+
+        if date < now:
+            raise forms.ValidationError("You cannot book a reservation in the past.")
+
+        return date
+
+
