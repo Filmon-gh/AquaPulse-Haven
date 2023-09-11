@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import Reservation
+from .models import UIElement
+
 
 
 @admin.register(Reservation)
@@ -15,4 +17,8 @@ class ReservationAdmin(admin.ModelAdmin):
         'user__username', 'first_name', 'last_name',
         'email', 'phone'
     )
-    
+
+
+@admin.register(UIElement)
+class UIElementAdmin(admin.ModelAdmin):
+    list_display = ('name', 'image',)  
