@@ -1,10 +1,38 @@
-<!-- home.html -->
 {% extends "base.html" %}
 
-{% block title %}My Website - Home{% endblock title %}
+{% block title %}River-Side Picnic Adventure{% endblock title %}
 
 {% block content %}
-    <h1>Welcome to TableBookingX</h1>
-    <p>Reserve a table at our restaurant and enjoy a delightful dining experience.</p>
-    
+    <!-- Two images side by side -->
+    <div class="image-container">
+        <img src="{{ image1_url }}" alt="Image 1" class="image">
+        <img src="{{ image2_url }}" alt="Image 2" class="image">
+    </div>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h1>About Us</h1>
+        <p>Welcome to our river-side picnic adventure!</p>
+        
+        <!-- Barbecue Section -->
+        <div class="activity">
+            <img src="{{ barbecue_image_url }}" alt="Barbecue" class="activity-image">
+            <h2>Barbecue</h2>
+            <p>Experience the joy of riverside barbecues with our delicious grilled delights. Reserve your spot now for an unforgettable outdoor dining experience.</p>
+        </div>
+        
+        <!-- Fishing Section -->
+        <div class="activity">
+            <img src="{{ fishing_image_url }}" alt="Fishing" class="activity-image">
+            <h2>Fishing</h2>
+            <p>Get your fishing gear ready! Enjoy a relaxing day of fishing by the river. Book your fishing spot and cast your line into the clear waters.</p>
+        </div>
+        
+        <!-- River Kayaking Section -->
+        <div class="activity">
+            <img src="{{ kayaking_image_url }}" alt="Kayaking" class="activity-image">
+            <h2>River Kayaking</h2>
+            <p>Explore the river's beauty up close with our river kayaking adventure. Paddle through serene waters and take in the breathtaking scenery.</p>
+        </div>
+    </section>
 {% endblock content %}
