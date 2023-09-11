@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import ReservationForm
 from .models import Reservation 
 from .models import UIElement
+from django.contrib import messages
 # Create your views here.
 
 def home_view(request):
@@ -32,7 +33,6 @@ def reservation_form(request):
     reservations = Reservation.objects.filter(user=request.user)
 
     return render(request, 'reservation_form.html', {'form': form, 'reservations': reservations})
-    
 def reservation_success(request):
     return render(request, 'reservation_success.html')
 
@@ -59,6 +59,7 @@ def delete_reservation(request, reservation_id):
         # Check if the user confirms the deletion
         if 'confirm_delete' in request.POST:
             reservation.delete()
+            messages.success(request, 'Reservation deleted successfully.')  # Add this line
             # Redirect to the reservation list or a success page
             return redirect('reservation_list')
         else:
