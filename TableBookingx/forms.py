@@ -16,13 +16,19 @@ class ReservationForm(forms.ModelForm):
             'phone': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
-    def clean_date(self):
-        date = self.cleaned_data.get('date')
+    def clean(self):
+        cleaned_data = super().clean()
+        date = cleaned_data.get('date')
+        time = cleaned_data.get('time')
+
         now = timezone.now().date()
+        selected_datetime = timezone.datetime.combine(date, time)
 
         if date < now:
             raise forms.ValidationError("You cannot book a reservation in the past.")
 
-        return date
+        # Check if a reservation with the same date and time already exists
+        if Reservation.objects.filter(date=date, time=time).exists():
+            raise forms.ValidationError("A reservation for this date and time already exists.")
 
-
+        return cleaned_data
