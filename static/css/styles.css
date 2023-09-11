@@ -4,7 +4,7 @@
 header {
   background-color: #007BFF; 
   color: #FFFFFF; 
-  padding: 10px 0;
+  padding: 25px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,6 +35,17 @@ nav .menu li a {
   color: #FFFFFF; /* Set link text color */
   font-weight: bold;
 }
+
+/* CSS for the image  */
+
+.image {
+  width: 50%; /* Ensure the image doesn't exceed the width of its container */
+  max-height: 50vh; /* Limit the image height to 30% of the viewport height */
+  display: block; /* Remove any extra spacing around the image */
+  margin: 20px auto; /* Center the image horizontally and add a 20px margin from the top */
+}
+
+
 
 
 /* Reservation Form Styles */
@@ -74,9 +85,9 @@ footer {
   background-color: #333;
   color: #fff;
   padding: 20px 0;
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
 .footer-content {
