@@ -2,10 +2,13 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .forms import ReservationForm
 from .models import Reservation 
+from .models import UIElement
 # Create your views here.
 
 def home_view(request):
-    return render(request, 'home.html')
+    ui_element = UIElement.objects.first()  
+    return render(request, 'home.html', {'ui_element': ui_element})
+    
 
 @login_required  # Apply the login_required decorator
 def reservation_list(request):
@@ -45,7 +48,7 @@ def update_reservation(request, reservation_id):
     else:
         form = ReservationForm(instance=reservation)
 
-    return render(request, 'update_reservation.html', {'form': form, 'reservation': reservation}
+    return render(request, 'update_reservation.html', {'form': form, 'reservation': reservation})
 
 
 @login_required
