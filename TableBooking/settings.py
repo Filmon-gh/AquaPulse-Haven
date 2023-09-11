@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://git.heroku.com/aquapulse-haven.git', 'localhost', '8000-filmongh-tablebookingx-5qkjjjvm6qf.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['aquapulse-haven-fcc804182dd8.herokuapp.com', 'localhost', '8000-filmongh-tablebookingx-5qkjjjvm6qf.ws-eu102.gitpod.io']
 
 
 # Application definition
