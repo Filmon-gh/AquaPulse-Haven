@@ -209,3 +209,71 @@ footer {
   color: #fff;
   font-weight: bold;
 }
+
+
+
+
+
+
+/* Style for the entire content section */
+.content-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* Style for profile information */
+.profile-info {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Style for table headers */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Style for table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Style for table cells */
+td {
+  padding: 8px;
+}
+
+/* Style for the "Create New Reservation" link */
+.create-reservation-link {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.create-reservation-link:hover {
+  background-color: #0056b3;
+}
