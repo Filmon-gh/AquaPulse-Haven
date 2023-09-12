@@ -1,42 +1,42 @@
-<!-- reservation_list.html -->
-
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Your Profile</h1>
-    <div class="profile-info">
-        <p><strong>First name:</strong> {{ user.first_name }}</p>
-        <p><strong>Last name:</strong> {{ user.last_name }}</p>
-        <p><strong>Email:</strong> {{ user.email }}</p>
-    </div>
+    <div class="content-container">
+        <h1>Your Profile</h1>
+        <div class="profile-info">
+            <p><strong>First Name:</strong> {{ user.first_name }}</p>
+            <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+        </div>
 
-    <h1>Your Reservations</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Party Size</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for reservation in reservations %}
+        <h1>Your Reservations</h1>
+        <table>
+            <thead>
                 <tr>
-                    <td>{{ reservation.date }}</td>
-                    <td>{{ reservation.time }}</td>
-                    <td>{{ reservation.party_size }}</td>
-                    <td>
-                        <a href="{% url 'update_reservation' reservation.id %}">Update</a>
-                        <a href="{% url 'delete_reservation' reservation.id %}">Delete</a>
-                    </td>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Party Size</th>
+                    <th>Actions</th>
                 </tr>
-            {% empty %}
-                <tr>
-                    <td colspan="4">You have no reservations.</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <a href="{% url 'reservation' %}">Create New Reservation</a>
+            </thead>
+            <tbody>
+                {% for reservation in reservations %}
+                    <tr>
+                        <td>{{ reservation.date }}</td>
+                        <td>{{ reservation.time }}</td>
+                        <td>{{ reservation.party_size }}</td>
+                        <td>
+                            <a href="{% url 'update_reservation' reservation.id %}">Update</a>
+                            <a href="{% url 'delete_reservation' reservation.id %}">Delete</a>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="4">You have no reservations.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'reservation' %}" class="create-reservation-link">Create New Reservation</a>
+    </div>
 {% endblock %}

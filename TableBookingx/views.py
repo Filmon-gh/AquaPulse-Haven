@@ -14,8 +14,7 @@ def home_view(request):
 @login_required  # Apply the login_required decorator
 def reservation_list(request):
     reservations = Reservation.objects.all()  # Query your reservations here
-    return render(request, 'reservation_list.html', {'reservations': reservations})
-
+    return render(request, 'reservation_list.html', {'user': request.user, 'reservations': reservations})
 
 @login_required
 def reservation_form(request):
@@ -36,8 +35,9 @@ def reservation_form(request):
 def reservation_success(request):
     return render(request, 'reservation_success.html')
 
+@login_required
 def update_reservation(request, reservation_id):
-    reservation = get_object_or_404(Reservation, pk=reservation_id)
+    reservation = get_object_or_404(Reservation, pk=reservation_id, user=request.user)
 
     if request.method == 'POST':
         form = ReservationForm(request.POST, instance=reservation)
@@ -53,7 +53,7 @@ def update_reservation(request, reservation_id):
 
 @login_required
 def delete_reservation(request, reservation_id):
-    reservation = get_object_or_404(Reservation, pk=reservation_id)
+    reservation = get_object_or_404(Reservation, pk=reservation_id, user=request.user)
 
     if request.method == 'POST':
         # Check if the user confirms the deletion
