@@ -59,8 +59,25 @@ The AquaPulse Haven website boasts a navigation menu to ensure a seamless and us
 
  - **Logo**: The AquaPulse Haven logo, placed on the left side of the  navigation menu. Clicking the logo at any point during the user's journey will swiftly return them to the homepage, maintaining a consistent and user-friendly browsing experience.
 
- - **Log Out**: When you're ready to conclude your session, simply log out by clicking on "Log Out" to ensure the security of your account
+ - **Log Out**: When you're ready to conclude your session, simply log out by clicking on "Log Out" to ensure the security of your account.
 
+
+
+### About Us
+
+The project features an "About Us" section dedicated to providing insights into the services and offerings. This section is designed to offer transparency and establish a connection with users by sharing relevant information about the services provided.
+
+### Image for the River Side Picnic
+
+A notable feature of the project is the inclusion of captivating images showcasing the serene riverside picnic spots. These images are intended to create an immersive experience for users, offering a visual glimpse of the scenic beauty available at AquaPulse Haven.
+
+### Footer
+
+The project incorporates a well-structured footer that provides essential information. In the footer, users can find links to social media profiles, contact details, and other relevant resources. The footer is designed to enhance the overall user experience and improve site accessibility.
+
+## Reservation Form (Booking and User Details)
+
+The Reservation Form is designed for booking and capturing user details.
 
 # Tools & Technologies Used
 
