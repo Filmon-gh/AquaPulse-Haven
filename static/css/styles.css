@@ -119,15 +119,6 @@ nav .menu li a {
 }
 
 
-
-/* Fishing Section */
-.activity:last-child {
-  text-align: center; /* Center the image horizontally */
-  margin-top: 20px; /* Add 20px margin on top of the image */
-}
-
-
-
 /* Reservation Form Styles */
 .reservation-form-container {
   text-align: center;
@@ -166,7 +157,6 @@ footer {
   color: #fff;
   padding: 20px 0;
   width: 100%;
-  position: fixed;
   bottom: 0;
 }
 
@@ -222,6 +212,7 @@ footer {
   border: 1px solid #ccc;
   background-color: #f9f9f9;
   border-radius: 5px;
+  margin-bottom: 40px; /* Add margin to separate content from footer */
 }
 
 /* Style for profile information */
@@ -276,4 +267,29 @@ td {
 
 .create-reservation-link:hover {
   background-color: #0056b3;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 480px) and (max-height: 870px) {
+  header {
+    padding: 10px 0; /* Reduce header padding */
+    background-color: #b1a695; 
+    color: #FFFFFF; 
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Style for vertical navigation menu */
+  nav .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Remove margin between vertical menu items */
+  nav .menu li {
+    margin-bottom: 10px;
+  }
 }
