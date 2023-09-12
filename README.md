@@ -20,6 +20,17 @@ Individuals who prefer the convenience of digital reservations over traditional 
 Goals for the Website
 
 
+## Agile Development
+
+This project was initiated alongside a GitHub Projects Page to facilitate the tracking and management of the expected workload. The primary goal was to outline the anticipated workload, identify epics, and subsequently break them down into user stories or manageable tasks. This systematic approach allowed for efficient progress and tracking.
+
+
+Throughout the development process, I continually worked on and updated the user stories, acceptance criteria, and tasks. This dynamic approach allowed for real-time adaptation to project needs and a more agile response to evolving requirements.
+
+
+Upon completing a task, I marked it as done, and if all aspects of a user story were completed, I moved it from the "In Progress" column to the "Completed" column.
+
+This dynamic and adaptive approach ensures that I have a clear understanding of my project's status and allows for efficient management of user stories in response to evolving project needs.
 
 ## User stories
 
