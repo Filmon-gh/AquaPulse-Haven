@@ -45,6 +45,16 @@ nav .menu li a {
   font-weight: bold;
 }
 
+.title-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.6em; /* Adjust the font size as needed */
+}
+
 /* Parent container for side-by-side images */
 .image-container {
   display: flex; /* Use flexbox to arrange images in a row */
