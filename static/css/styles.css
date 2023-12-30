@@ -55,6 +55,25 @@ nav .menu li a {
   font-size: 2.6em; /* Adjust the font size as needed */
 }
 
+.centered-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* Center-align the content */
+}
+
+.centered-content h1 {
+  font-size: 2.5em;
+  color: #3b3535; 
+}
+
+.centered-content p {
+  font-size: 1.5em;
+  line-height: 1.5;
+  color: #555; 
+  margin-bottom: 10px; /* Add some spacing between paragraphs */
+}
+
 /* Parent container for side-by-side images */
 .image-container {
   display: flex; /* Use flexbox to arrange images in a row */
