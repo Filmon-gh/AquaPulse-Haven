@@ -3,7 +3,6 @@ from .models import Reservation
 from .models import UIElement
 
 
-
 @admin.register(Reservation)
 class ReservationAdmin(admin.ModelAdmin):
     list_display = (
@@ -21,4 +20,4 @@ class ReservationAdmin(admin.ModelAdmin):
 
 @admin.register(UIElement)
 class UIElementAdmin(admin.ModelAdmin):
-    list_display = ('name', 'image',)  
+    list_display = ('name', 'image',)
