@@ -78,23 +78,6 @@ nav .menu li a {
   font-size: 1.4em;
 }
 
-/* Parent container for side-by-side images */
-
-.image-container {
-  display: flex;
-}
-
-.activity {
-  flex: 1;
-  margin: 0 10px;
-}
-
-.activity-image {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
 /* CSS for the About Us section */
 
 .centered-content {
