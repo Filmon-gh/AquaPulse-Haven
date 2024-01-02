@@ -6,9 +6,22 @@ AquaPulse Haven is a riverside destination that offers a range of activities and
 
 AquaPulse Haven is a fictional riverside destination brought to life through this web-based reservation system. The primary aim is to provide visitors with an enticing glimpse of the serene location, unique recreational offerings, and the ability to effortlessly plan their visits.
 
-## Design
+# Database Schema
 
-In crafting this platform, we've opted for a modern and minimalist design ethos, with a predominant color palette of soothing black and white tones. We deviate from this scheme only when it enhances user interactions, such as through user-friendly buttons, informative links, and streamlined booking feedback.
+## Reservation model
+
+|   id         | Field               |
+|--------------|---------------------|
+| user         | OneToOneField       |
+| first_name   | CharField           |
+| last_name    | CharField           |
+| email        | EmailField          |
+| date         | DateField           |
+| time         | CharField           |
+| party_size   | PositiveIntegerField|
+| phone        | CharField           |
+| created_at   | DateTimeField       |
+
 
 ##  Site User
 
@@ -145,3 +158,10 @@ Psycopg2: Utilized as the PostgreSQL database adapter, facilitating seamless com
 | **Reservation updating**             | User can update a reservation                                   | Pass    |
 | **Reservation Deletion**             | User can delete a pending reservation                          | Pass    |
 
+
+# Google Lighthouse Testing
+Desktop
+<img src="https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/scoreresult.JPG?raw=true" width="320" height="250" />
+
+mobile
+<img src="https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/scoreresult.JPG?raw=true" width="320" height="250" />
