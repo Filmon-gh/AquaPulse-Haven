@@ -107,3 +107,41 @@ CSS Flexbox and CSS Grid: Employed to create an advanced responsive layout, ensu
 Gunicorn: Employed as a server provider to serve the site efficiently and reliably.
 
 Psycopg2: Utilized as the PostgreSQL database adapter, facilitating seamless communication between the application and the database.
+
+# Testing
+
+### Account Registration Tests
+
+| Test                                   | Result |
+|----------------------------------------|---------|
+| User can create account                | Pass  |
+| User can successfully log in           | Pass  |
+| User can log out successfully          | Pass  |
+
+### User Navigation Tests
+
+| Test                                       | Result |
+|--------------------------------------------|---------|
+| User successfully navigates to Reservations | Pass |
+| User accesses the account profile page      | Pass  |
+| SuperUser successfully accesses admin panel | Pass  |
+
+### Security Verification Tests for User Accounts
+
+| Test                                              | Result |
+|---------------------------------------------------|---------|
+| Non-logged-in user can make a reservation          | Pass    |
+| Non-logged-in user can access the profile page     | Pass    |
+| Non-superuser can access the admin panel           | Pass    |
+
+### Reservation Tests
+
+| Reservation Functionality            | Test Description                                             | Outcome |
+|--------------------------------------|-------------------------------------------------------------|---------|
+| **Reservation Creation**             | User successfully makes a reservation with all fields completed | Pass    |
+| **Form Submission Handling**         | User can not  submit a reservation with an empty form       | pass   |
+|                                      | User can not submit a form without an email address        | pass    |
+| **Visibility and Management**        | User can view their  reservations from their profile      | Pass    |
+| **Reservation updating**             | User can update a reservation                                   | Pass    |
+| **Reservation Deletion**             | User can delete a pending reservation                          | Pass    |
+
