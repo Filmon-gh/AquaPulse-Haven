@@ -160,8 +160,16 @@ Psycopg2: Utilized as the PostgreSQL database adapter, facilitating seamless com
 
 
 # Google Lighthouse Testing
-Desktop
-<img src="https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/scoreresult.JPG?raw=true" width="320" height="250" />
 
-mobile
-<img src="https://github.com/Filmon-gh/Quiz-App/blob/main/readme-images/scoreresult.JPG?raw=true" width="320" height="250" />
+### mobile
+<img src="https://raw.githubusercontent.com/Filmon-gh/aquapulse-haven/46b580ba681ac94e558b2c567c2b5daa5afcb934/G%20light%20house%20mobile%20device.png" width="350" height="200" />
+
+### Desktop 
+<img src="https://raw.githubusercontent.com/Filmon-gh/aquapulse-haven/46b580ba681ac94e558b2c567c2b5daa5afcb934/light_house.png" width="350" height="200" />
+
+### css code 
+
+<img src="https://raw.githubusercontent.com/Filmon-gh/aquapulse-haven/46b580ba681ac94e558b2c567c2b5daa5afcb934/css%20validation.png" width="600" height="200" />
+
+### python code checking (no error)
+<img src="https://raw.githubusercontent.com/Filmon-gh/aquapulse-haven/46b580ba681ac94e558b2c567c2b5daa5afcb934/python%20check.png" width="900" height="500" />
