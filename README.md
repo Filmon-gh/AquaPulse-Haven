@@ -173,3 +173,39 @@ Psycopg2: Utilized as the PostgreSQL database adapter, facilitating seamless com
 
 ### python code checking (no error)
 <img src="https://raw.githubusercontent.com/Filmon-gh/aquapulse-haven/46b580ba681ac94e558b2c567c2b5daa5afcb934/python%20check.png" width="900" height="500" />
+
+
+# Deployment on Heroku
+
+I successfully deployed my Django project on Heroku, and this concise guide outlines the steps I took to seamlessly host my application and database on Heroku's cloud platform.
+
+1. Heroku Account Setup
+I signed up for a Heroku account and I logged in to my Heroku account.
+
+2. Create a New App
+Visited the main Heroku Dashboard.
+Clicked 'New' and then 'Create New App.'
+Provided a unique project name and clicked 'Create App.'
+
+3. Database Configuration
+On the deploy tab in Heroku, added 'Heroku Postgres' as my database.
+
+4. Configure Environment Variables
+In the 'Settings' tab, under 'Config Vars,' copied the 'DATABASE_URL' to the clipboard.
+In my Django app repository, created a new file named env.py.
+Set the 'DATABASE_URL' and secret key in env.py.
+
+5. Heroku Config Vars
+Added the secret key to Heroku Config Vars:
+KEY: SECRET_KEY
+VALUE: The secret key from env.py.
+
+6. Update Django Settings
+In settings.py:
+Imported necessary modules.
+Inserted: if os.path.isfile("env.py"): import env.
+Replaced the default secret key.
+Updated the databases section.
+
+7. Migrate Models
+In the terminal, ran: python manage.py migrate
